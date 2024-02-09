@@ -1,6 +1,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0; /* no default margin */
+  background: linear-gradient(to right, #a1f8bb, #f9bdbd, #fdffa0, #afbeff);
 }
 
 .container {
@@ -13,22 +14,22 @@ a {
 
 nav {
   width: 100%;
-  background-color: #333; /* bg color */
+  background: linear-gradient(to right, #84fda8, #f78e8e, #f1f374, #7790ff);
   padding: 20px 0; 
   margin: 0; /* no default margin */
-
+  text-align: center; /* center nav items */
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center; /* center list items horizontally */
+  display: inline-block; /* list items align horizontally */
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 20px; /* spacing between list items */
+  display: inline-block;
+  margin-right: 40px; /* spacing between list items */
 }
 
 nav ul li:last-child {
@@ -42,7 +43,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #00B7FF; /* color on hover */
+  color: #751562; /* color on hover */
+}
+
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: block; /* vertical layout on small screens */
+    text-align: center; /* center the navigation items */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0; /* space between list items */
+  }
 }
 
 /* contact form success message */
@@ -52,4 +65,28 @@ nav ul li a:hover {
   padding: 20px;
   text-align: center;
   font-size: 24px; 
+}
+
+/* resizing photo on home page */
+.hello-image {
+  width: 200px; 
+  height: auto; 
+}
+
+/* resizing photo on about me page */
+.about-image {
+  width: 200px; 
+  height: auto; 
+}
+
+/* resizing photo on projects page */
+.projects-image {
+  width: 200px; 
+  height: auto; 
+}
+
+/* resizing photo on contact page */
+.contact-image {
+  width: 200px; 
+  height: auto; 
 }
