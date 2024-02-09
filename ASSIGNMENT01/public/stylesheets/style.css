@@ -1,8 +1,46 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0; /* no default margin */
+}
+
+.container {
+  padding: 20px; /* padding to create space between content n edges */
 }
 
 a {
-  color: #00B7FF;
+  color: #2200ff;
+}
+
+nav {
+  width: 100%;
+  background-color: #333; /* bg color */
+  padding: 20px 0; 
+  margin: 0; /* no default margin */
+
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* center list items horizontally */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px; /* spacing between list items */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* no margin from last list item */
+}
+
+nav ul li a {
+  color: #fff; /* text color */
+  text-decoration: none;
+  font-size: 18px; /* font size */
+}
+
+nav ul li a:hover {
+  color: #00B7FF; /* color on hover */
 }

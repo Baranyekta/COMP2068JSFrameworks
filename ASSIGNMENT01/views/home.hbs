@@ -3,9 +3,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <h1>Welcome to My Portfolio - Home Page</h1>
+<body>
+  <h1>Welcome to My Portfolio - Home Page</h1>
     <p>Hi there, my name is Baran Akhavan-Yekta and this is my personal
       portfolio website. Here you will find information about me, my projects,
       and how to get in touch with me!</p>
@@ -21,30 +22,28 @@
 
     <h2>Projects</h2>
     <p>Below are some of my favorite projects I loved doing:</p>
-    <ul>
-      <li><a
-          href="https://baranyekta.github.io/Java-Assignment3-200529109/"
-        >Project 1</a></li>
-      <li><a href="https://baranyekta.github.io/Java-Lab2-200529109/">Project 2</a></li>
-      <li><a
-          href="https://baranyekta.github.io/Java-Assignment2-200529109/"
-        >Project 3</a></li>
-    </ul>
+  <ul>
+    <li><a href="https://baranyekta.github.io/Java-Assignment3-200529109/">Project 1</a></li>
+    <li><a href="https://baranyekta.github.io/Java-Lab2-200529109/">Project 2</a></li>
+    <li><a href="https://baranyekta.github.io/Java-Assignment2-200529109/">Project 3</a></li>
+  </ul>
 
-    <h2>Contact Me</h2>
-    <p>
-      I am excited to share my projects and experiences with you. Feel free to
-      contact me if you have any questions or opportunities. You can reach me
-      via email at
-      <a
-        href="mailto:200529109@student.georgianc.on.ca"
-      >200529109@student.georgianc.on.ca</a>
-      or connect with me on LinkedIn and GitHub:
-    </p>
-    <ul>
-      <li><a
-          href="https://www.linkedin.com/in/baran-yekta-5b6172292/">LinkedIn</a></li>
-      <li><a href="https://github.com/Baranyekta">GitHub</a></li>
-    </ul>
+  <h2>Contact Me</h2>
+  <p>
+    I am excited to share my projects and experiences with you. Feel free to
+    contact me if you have any questions or opportunities. You can reach me
+    via email at
+    <a href="mailto:200529109@student.georgianc.on.ca">200529109@student.georgianc.on.ca</a>
+    or connect with me on LinkedIn and GitHub:
+  </p>
+  <ul>
+    <li><a href="https://www.linkedin.com/in/baran-yekta-5b6172292/">LinkedIn</a></li>
+    <li><a href="https://github.com/Baranyekta">GitHub</a></li>
+  </ul>
+  {{#if successMessage}}
+  <div class="success-message">
+    {{successMessage}}
+  </div>
+  {{/if}}
   </body>
 </html>
