@@ -44,3 +44,12 @@ nav ul li a {
 nav ul li a:hover {
   color: #00B7FF; /* color on hover */
 }
+
+/* contact form success message */
+.success-message {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px; 
+}
