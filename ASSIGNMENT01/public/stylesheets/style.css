@@ -208,6 +208,7 @@ footer {
   padding: 20px 0;
 }
 
+
 .container {
   max-width: 1200px; 
   margin: 0 auto; 
@@ -244,22 +245,17 @@ footer {
   text-align: center;
 }
 
-.footer-social {
+.footer-social .social-links {
   display: flex;
   align-items: center; 
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
   margin-right: 5px; /* space between social links n footer img */
 }
 
-.social-links a {
+.footer-social .social-links a {
   margin: 0 10px;
 }
 
-.footer-image img {
-  width: 100px; 
+.footer-social .footer-image img {
+  width: 50px; /* adjust size as needed */
   height: auto;
 }

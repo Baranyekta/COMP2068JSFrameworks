@@ -1,17 +1,13 @@
 // app.js
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var projectsRouter = require('./routes/projects');
-var aboutRouter = require('./routes/about'); 
-var contactRouter = require('./routes/contact')
+const indexRouter = require('./controllers/index'); // Update the route import
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,13 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/projects', projectsRouter);
-app.use('/about', aboutRouter); 
-app.use('/contact', contactRouter); 
+app.use('/', indexRouter); // Use the indexRouter for all routes
 
-// catch 404 n forward to error handler
+// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
