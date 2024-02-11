@@ -1,4 +1,5 @@
 body {
+  font-family: 'Montserrat', sans-serif;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0; /* no default margin */
   background: linear-gradient(to right, #a1f8bb, #f9bdbd, #fdffa0, #afbeff);
@@ -20,33 +21,121 @@ header {
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700; 
+  font-size: 36px;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #868282;
 }
 
 p {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: none;
+  color: #555;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #555;
 }
 
 .main-content {
   background: linear-gradient(to right, #a1f8bb, #afbeff);
-  padding: 40px 0;
+  padding: 40px 20px;
   border: 5px solid #fdff97;
 }
 
 .about-me {
-  text-align: center;
+  background-color: #ffffff; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(255, 230, 104);
+  margin-top: 20px;
+  text-align: center; 
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-image {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.about-details {
+  flex: 1;
+}
+
+.about-details h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #868282; 
+}
+
+.about-details p {
+  font-family: 'Montserrat', sans-serif;
+  color: #868282;
+}
+
+.about-details ul {
+  margin-left: 20px;
+}
+
+.about-details ul li {
+  margin-bottom: 5px;
+}
+
+.skills {
+  margin-top: 20px;
+}
+
+.skills ul {
+  padding: 0;
+  margin: 0;
+}
+
+.skills h2 {
+  margin-bottom: 10px;
+}
+
+.skill-item {
+  margin-bottom: 10px;
+  background-color: #cbafe2e2;
+  border-radius: 5px;
+  padding: 5px 12px;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.skill-item:last-child {
+  margin-right: 0;
 }
 
 .box {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgb(255, 230, 104); /* added under glow effect */
 }
 
 .about-me h2 {
   font-family: 'Montserrat', sans-serif;
   color: #868282; 
+  margin-bottom: 20px;
 }
 
 .about-me p {
@@ -111,8 +200,8 @@ p {
 
 .social-links img {
   width: 50px;
-  height: 50px;
-  margin: 0 20px;
+  height: auto;
+  margin-right: 10px;
 }
 
 a {
@@ -203,11 +292,10 @@ nav ul li a:hover {
   height: auto;
 }
 
-footer {
+.footer {
   background-color: #fdff97;
   padding: 20px 0;
 }
-
 
 .container {
   max-width: 1200px; 
@@ -230,6 +318,7 @@ footer {
 }
 
 .footer-contact h3 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -241,8 +330,13 @@ footer {
   margin-top: 20px; 
 }
 
+.privacy-policy p  {
+  font-size: 14px; 
+  color: #555; 
+}
+
 .copyright {
-  text-align: center;
+  font-size:11px;
 }
 
 .footer-social .social-links {
@@ -256,6 +350,6 @@ footer {
 }
 
 .footer-social .footer-image img {
-  width: 50px; /* adjust size as needed */
+  width: 50px; 
   height: auto;
 }
