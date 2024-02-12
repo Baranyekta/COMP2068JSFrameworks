@@ -7,9 +7,4 @@ router.get('/', function(req, res, next) {
     res.render('contact', { title: 'Contact Me' });
 });
 
-// POST route for handling contact form submission
-router.post('/', function(req, res, next) {
-    // Handle form submission logic here
-});
-
 module.exports = router;
