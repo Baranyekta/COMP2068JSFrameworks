@@ -1,10 +1,13 @@
-<h1>Tasks</h1>
-<ul>
-    {{#each tasks}}
-        <li>
-            <h3>{{title}}</h3>
-            <p>{{description}}</p>
-            <p>Deadline: {{deadline}}</p>
-        </li>
-    {{/each}}
-</ul>
+<!-- views\index.hbs -->
+{{#> layout}}
+    <div class="container">
+        <h1>AssignMate</h1>
+        <form id="addTaskForm" class="task-form">
+            <input type="text" name="title" placeholder="Enter task title" required>
+            <textarea name="description" placeholder="Enter task description"></textarea>
+            <input type="date" name="deadline" required>
+            <button type="submit" class="btn">Add Task</button>
+        </form>
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+{{/layout}}

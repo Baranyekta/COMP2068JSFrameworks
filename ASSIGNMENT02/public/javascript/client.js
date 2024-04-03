@@ -1,8 +1,9 @@
+// public\javascript\client.js
 document.addEventListener('DOMContentLoaded', () => {
     const addTaskForm = document.getElementById('addTaskForm');
     const taskList = document.getElementById('taskList');
 
-    // Function to render tasks
+    // to render tasks
     const renderTasks = (tasks) => {
         taskList.innerHTML = '';
         tasks.forEach(task => {
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Fetch tasks from the server
+    // fetch tasks from server
     const fetchTasks = async () => {
         try {
             const response = await fetch('/tasks');
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Handle form submission
+    // handling form submission
     addTaskForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(addTaskForm);
@@ -56,6 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initial fetch of tasks when the page loads
+    // initial task fetch of when page loads
     fetchTasks();
 });

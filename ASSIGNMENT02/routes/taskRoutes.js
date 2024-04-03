@@ -5,11 +5,11 @@ const Task = require('../models/Task');
 const schedule = require('node-schedule');
 const notifier = require('node-notifier');
 
-// Create a new task
+// creating a new task
 router.post('/', async (req, res) => {
     try {
         const task = await Task.create(req.body);
-        // Schedule a reminder for the task deadline
+        // scheduling a reminder for the task deadline
         scheduleReminder(task);
         res.status(201).json(task);
     } catch (err) {
@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// Get all tasks
+// getting all tasks
 router.get('/', async (req, res) => {
     try {
         const tasks = await Task.find();
@@ -27,12 +27,12 @@ router.get('/', async (req, res) => {
     }
 });
 
-// Update a task
+// updating a task
 router.put('/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const task = await Task.findByIdAndUpdate(id, req.body, { new: true });
-        // Reschedule reminder if deadline is updated
+        // reschedule reminder if deadline is updated
         if (req.body.deadline) {
             rescheduleReminder(task);
         }
@@ -42,12 +42,12 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// Delete a task
+// deleting a task
 router.delete('/:id', async (req, res) => {
     try {
         const { id } = req.params;
         await Task.findByIdAndDelete(id);
-        // Cancel reminder if task is deleted
+        // canceling reminder if task is deleted
         cancelReminder(id);
         res.json({ message: 'Task deleted successfully' });
     } catch (err) {
@@ -55,7 +55,7 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-// Schedule reminder for task deadline
+// scheduling reminder for task deadline
 function scheduleReminder(task) {
     const { deadline } = task;
     const reminderDate = new Date(deadline);
@@ -66,13 +66,13 @@ function scheduleReminder(task) {
     task.save();
 }
 
-// Reschedule reminder if task deadline is updated
+// rescheduling reminder if task deadline is updated
 function rescheduleReminder(task) {
     cancelReminder(task._id);
     scheduleReminder(task);
 }
 
-// Cancel reminder for task
+// canceling reminder for task
 function cancelReminder(taskId) {
     const task = Task.findById(taskId);
     if (task.reminderJobId) {
@@ -82,14 +82,14 @@ function cancelReminder(taskId) {
     }
 }
 
-// Send notification for task reminder
+// send notif. for task reminder
 function sendNotification(task) {
     const notificationMessage = `Reminder: ${task.title} is due on ${task.deadline}`;
     notifier.notify({
         title: 'AssignMate Reminder',
         message: notificationMessage,
         sound: true,
-        wait: true // Wait for user action before closing notification
+        wait: true // wait for user action before closing notif.
     });
 }
 
