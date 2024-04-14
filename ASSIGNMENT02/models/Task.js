@@ -13,7 +13,7 @@ const taskSchema = new mongoose.Schema({
         enum: ['Low', 'Medium', 'High'],
         default: 'Medium'
     },
-    reminderJobId: String // To store job id for scheduling reminders
+    reminderJobId: String // store job id for scheduling reminders
 });
 
 const Task = mongoose.model('Task', taskSchema);
