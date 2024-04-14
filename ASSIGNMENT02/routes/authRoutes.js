@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
-// sign-in route
+// login route
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {

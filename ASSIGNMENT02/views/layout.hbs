@@ -1,15 +1,60 @@
 <!-- views\layout.hbs -->
 
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body>
-    {{{body}}}
+  <body>    
+    <header>
+        <div class="header-content">
+        <h1>Empowering Efficiency, One Task at a Time...</h1>
+        <div class="nav-icon"></div>
+    </header>
 
-    <script src="/public/javascript/client.js"></script>
-  </body>
+    <div class="spacer">
+    <div class="nav-drawer" id="navDrawer">
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/addTask">Add Task</a></li>
+            <li><a href="/taskList">Task List</a></li>
+            <li><a href="/privacyPolicy">Privacy Policy</a></li>
+        </ul>
+          <p id="closeMessage">Will close in 5 seconds</p>
+    </div>
+
+    {{{body}}} <!-- render main content of the page -->
+    </div>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section contact-info">
+            <h3>Contact Us</h3>
+            <p>
+                <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ec=GAlAFw&hl=en-GB&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1309461853%3A1713047636729184&theme=mn&ddm=0" class="email-link">AssignMatesupport@gmail.com</a><br>
+                <a href="https://maps.app.goo.gl/fYRjo5GRQTYqgtbe6" class="address-link">123 Main Street, Toronto, Canada</a><br>
+                +1 (289) 512-9572
+            </p>
+        </div>
+        <div class="footer-section follow-us">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/facebook/?brand_redir=103274306376166" class="icon-link"><img src="/images/facebook.png" alt="Facebook" class="icon"></a>
+                <a href="https://twitter.com/X" class="icon-link"><img src="/images/twitter.png" alt="Twitter" class="icon"></a>
+                <a href="https://www.instagram.com/instagram/" class="icon-link"><img src="/images/instagram.jpeg" alt="Instagram" class="icon"></a>
+                <a href="https://www.linkedin.com/company/linkedin/" class="icon-link"><img src="/images/linkedin.png" alt="LinkedIn" class="icon"></a>
+                <a href="https://github.com/Baranyekta/COMP2068JSFrameworks/tree/COMP2068JSFrameworks" class="icon-link"><img src="/images/github.jpeg" alt="GitHub" class="icon"></a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <p>&copy; 2024 AssignMate. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="/public/javascript/navDrawer.js"></script> 
+</body>
 </html>
