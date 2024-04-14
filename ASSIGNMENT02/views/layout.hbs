@@ -9,11 +9,21 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>    
-    <header>
-        <div class="header-content">
+<header>
+    <div class="header-content">
         <h1>Empowering Efficiency, One Task at a Time...</h1>
-        <div class="nav-icon"></div>
-    </header>
+        {{#if session.userEmail}}
+            <p>Welcome, {{session.userEmail}}</p>
+        {{else}}
+            {{#if session.githubLogin}}
+                <p>Welcome!</p>
+            {{else}}
+                <div class="nav-icon"></div>
+            {{/if}}
+        {{/if}}
+    </div>
+</header>
+
 
     <div class="spacer">
     <div class="nav-drawer" id="navDrawer">

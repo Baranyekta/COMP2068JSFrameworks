@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var navIcon = document.querySelector('.nav-icon');
     var navDrawer = document.getElementById('navDrawer');
+    
     navIcon.addEventListener('click', function() {
         if (navDrawer.style.display === 'block') {
             // close drawer slowly

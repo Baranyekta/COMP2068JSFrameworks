@@ -11,9 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "hbs": "^4.2.0",
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.4",
-    "node-notifier": "^10.0.1"
+    "node-notifier": "^10.0.1",
+    "passport": "^0.7.0",
+    "passport-github": "^1.1.0"
   }
 }

@@ -1,28 +1,22 @@
 // routes/authRoutes.js
-const express = require('express');
-const router = express.Router();
-const User = require('../models/User');
+const User = require('../models/user');
 
-// login route
-router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
-  try {
-    // find user by email
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res.status(404).json({ message: 'User not found' });
+// ex route for sign-up
+app.post('/signup', async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        // if the user already exists...
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.render('signup', { title: 'Sign Up', errorMessage: 'User already exists with this email' });
+        }
+        // create a new user
+        const newUser = new User({ email, password });
+        await newUser.save();
+        // redirect
+        res.redirect('/login');
+    } catch (error) {
+        console.error('Error signing up:', error);
+        res.render('signup', { title: 'Sign Up', errorMessage: 'An error occurred while signing up' });
     }
-    // check if pw matches
-    if (user.password !== password) {
-      return res.status(401).json({ message: 'Incorrect password' });
-    }
-    // authentication successful
-    req.session.user = user; // store user in session
-    res.status(200).json({ message: 'Sign-in successful' });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Internal Server Error' });
-  }
 });
-
-module.exports = router;

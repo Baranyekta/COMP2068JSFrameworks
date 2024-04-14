@@ -1,5 +1,4 @@
-<!-- views/login.hbs -->
-
+{{!-- views\signup.hbs --}}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,13 +6,13 @@
     <title>{{title}}</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body class="login-body">
-    <div class="login-container">
-      <h1>Login Page</h1>
+  <body class="signup-body">
+    <div class="signup-container">
+      <h1>Sign Up</h1>
       {{#if errorMessage}}
         <p class="error-message">{{errorMessage}}</p>
       {{/if}}
-      <form action="/login" method="POST">
+      <form action="/signup" method="POST">
         <label for="email">Email:</label>
         <input
           type="email"
@@ -27,15 +26,11 @@
           type="password"
           id="password"
           name="password"
-          autocomplete="current-password"
+          autocomplete="new-password"
           required
         /><br /><br />
-        <br />
-        <button type="submit">Login</button>
+        <button type="submit">Sign Up</button>
       </form>
-      <a href="{{githubLoginUrl}}" class="github-login-link">
-          <img src="/images/githublogin.png" alt="Login with GitHub">
-      </a>
     </div>
   </body>
 </html>
