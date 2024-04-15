@@ -1,0 +1,42 @@
+<!-- views/login.hbs -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="login-body">
+    <div class="login-container">
+      <h1>Login Page</h1>
+      {{#if errorMessage}}
+        <!-- to display specific error message -->
+        <p class="error-message">{{errorMessage}}</p>
+      {{/if}}
+      <form action="/login" method="POST">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required
+        /><br /><br />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="current-password"
+          required
+        /><br /><br />
+        <br />
+        <button type="submit">Login</button>
+      </form>
+      <a href="{{githubLoginUrl}}" class="github-login-link">
+        <img src="/images/githublogin.png" alt="Login with GitHub" />
+      </a>
+    </div>
+  </body>
+</html>
