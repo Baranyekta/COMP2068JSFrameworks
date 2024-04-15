@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // schema for document
 const documentSchema = new mongoose.Schema({
     // schema fields
-    title: { type: String, index: true }, // Example index on the 'title' field
+    title: { type: String, index: true },
     content: String,
 });
 

@@ -1,5 +1,5 @@
-{{!-- views\signup.hbs --}}
-<!DOCTYPE html>
+{{! views\signup.hbs }}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,8 @@
       {{#if errorMessage}}
         <p class="error-message">{{errorMessage}}</p>
       {{/if}}
-      {{#if error}} <!-- Add this block to display specific error message -->
+      {{#if error}}
+        <!-- to display specific error message -->
         <p class="error-message">{{error}}</p>
       {{/if}}
       <form action="/signup" method="POST">

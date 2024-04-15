@@ -1,5 +1,5 @@
 <!-- views/login.hbs -->
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,6 +11,7 @@
     <div class="login-container">
       <h1>Login Page</h1>
       {{#if errorMessage}}
+        <!-- to display specific error message -->
         <p class="error-message">{{errorMessage}}</p>
       {{/if}}
       <form action="/login" method="POST">
@@ -34,7 +35,7 @@
         <button type="submit">Login</button>
       </form>
       <a href="{{githubLoginUrl}}" class="github-login-link">
-          <img src="/images/githublogin.png" alt="Login with GitHub">
+        <img src="/images/githublogin.png" alt="Login with GitHub" />
       </a>
     </div>
   </body>

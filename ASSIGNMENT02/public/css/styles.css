@@ -24,7 +24,7 @@ header {
     background-color: #f3f3f3;
     color: #874569;
     padding: 20px;
-    text-align: center;
+    text-align: center; 
 }
 
 .header-content {
@@ -159,7 +159,7 @@ header {
     margin-top: 20px;
 }
 
-/* img below the additional text */
+/* img below the additional text (join us) */
 .join-image {
     display: block;
     margin: 20px auto; 
@@ -342,6 +342,7 @@ button[type="submit"]:hover {
     background-color: #367f3a; /* change bg color on hover */
 }
 
+/* error message */
 .error-message {
     color: red;
     font-weight: bolder;
@@ -350,6 +351,7 @@ button[type="submit"]:hover {
     margin-top: 10px;
 }
 
+/* github img link */
 .github-login-link {
     margin-top: 30px;
     display: inline-block;
@@ -362,6 +364,7 @@ button[type="submit"]:hover {
     border: 4px solid #773dda; /* border */
   }
 
+  /* sign up */
   .signup-container {
     margin: 0 auto;
     text-align: center;
