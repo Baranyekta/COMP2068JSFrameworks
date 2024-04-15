@@ -1,4 +1,5 @@
 {{!-- views\signup.hbs --}}
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,6 +12,9 @@
       <h1>Sign Up</h1>
       {{#if errorMessage}}
         <p class="error-message">{{errorMessage}}</p>
+      {{/if}}
+      {{#if error}} <!-- Add this block to display specific error message -->
+        <p class="error-message">{{error}}</p>
       {{/if}}
       <form action="/signup" method="POST">
         <label for="email">Email:</label>
@@ -31,7 +35,7 @@
         /><br /><br />
         <button type="submit">Sign Up</button>
       </form>
+      <p>Already have an account? <a href="/login">Login here.</a></p>
     </div>
   </body>
 </html>
-
